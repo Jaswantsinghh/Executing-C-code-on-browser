@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Executing C Code on browser</title>
+	</head>
+	<body>
+		<h1>How I executed my C code on browser</h1>
+		<h2>STEP 1: Installing apacahe web server on Ubuntu</h2>
+		<p>
+			Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request 				them. It is open-source software, which means it can be used and modified freely.
+		</p>
+		<p>
+			The first step towards executing a C code on browser is to install Apache on ubuntu.I followed the steps mentioned in the given website:
+		</p>
+		<p>
+			<a href="http://google.com">https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04</a> 
+		</p>
+		<h2>STEP 2: Installing a text editor</h2>
+		<p>
+			After installing Apache on ubuntu,i installed vim text editor by following the given command:
+		</p>
+		<p>	
+			<cite>sudo apt-get install build-essential vim apache2</cite>
+		</p>
+		<p>	
+			I got to know about this command in a tutorial on youtube.
+		</p>
+		<h2>STEP 3: Writing a C code on terminal</h2>
+		<p>
+			After installing vim text editor i wrote a very simple C code to execute Hello world by following the given commands:
+		</p>
+		<p>	
+			<cite>vim hello.c</cite> 
+		</p>
+		<p>	
+			And wrote the following code:
+		</p>
+		<p>	
+			<cite>#include <stdio.h>
+		</p>
+		<p>
+			<cite>int main()</cite>
+		</p>
+		<p>
+			<cite>{</cite>
+		</p>
+		<P>
+				<cite>printf("Content-type: text/plain");</cite>
+		</P>
+		<p>
+				<cite>printf("hello\n");</cite>
+		</p>
+		<p>
+				<cite>return 0;</cite>
+		</p>
+		<p>
+			<cite>}</cite> 
+		</p>	
+		<h2>STEP 4: Compiling the code and executing it</h2>
+		<p>
+			To compile the c code i used the given command:
+		</p>
+		<p>	
+			<cite>gcc hello.c -o hello</cite> 
+		</p>
+		<p>	
+			<cite>./hello</cite> 
+		</p>
+		<p>
+			After this i followed the commands explained in the given tutorials:
+		</p>
+		<p>
+			<a href="http://youtube.com">https://youtu.be/dKKshPF2OJ4</a>
+		</p>	
+		<p>
+			The commands were as follows:
+		</p>
+		<p>
+			<cite>sudo a2enmod cgi</cite>
+		</p>
+		<p>
+			<cite>sudo cp hello /usr/lib/cgi-bin</cite>
+		</p>
+		<p>	
+			Now search: 
+		</p>
+		<p>	
+			<cite>ip address/cgi-bin/hello</cite> 
+		</p>
+		
+		</body>
+</html>
