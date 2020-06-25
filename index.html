@@ -8,7 +8,7 @@
                 <h2>STEP 1: Installing apacahe web server on Ubuntu</h2>
                 <p>
                         Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request     >
-                        The first step towards executing a C code on browser is to install Apache on ubuntu.I followed the steps mentioned in the given website:<br />
+                        The first step towards executing a C code on browser is to install Apache on ubuntu. I followed the steps mentioned in the given website:<br />
                         <a href="https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04" target="_blank">https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04</a>
                 <br />  The following commands were given in the above website:<br />
                 <p> <u>To install apache</u></p>
@@ -30,12 +30,12 @@
                         <li>sudo ufw enable</li>
                         <li>sudo ufw status</li>
                 </ul>
-                <p>The status was <strong>active</strong>.</p>
+                <p>The status shown was <strong>active</strong>.</p>
 
                 </p>
                 <h2>STEP 2: Installing a text editor</h2>
                 <p>
-                        After installing Apache on ubuntu,i installed vim text editor by following the given command:<br />
+                        After installing Apache on ubuntu, I installed vim text editor by following the given command:<br />
                 <ul>
                         <li>sudo apt-get install build-essential vim apache2</li>
                 </ul><br />
@@ -43,11 +43,11 @@
                 It was explained that (build-essential) is used in this command because we need to compile the C code and (vim) is the text editor and (apache2) is the web server.It took few seconds to install.
                 <h2>STEP 3: Writing a C code on terminal</h2>
                 <p>
-                        After installing vim text editor i wrote a very simple C code to execute Hello world by following the given commands:<br />
+                        After installing vim text editor I wrote a very simple C code to execute Hello world by following the given commands:<br />
                 <ul>
                         <li>vim hello.c</li>
                 </ul> <br />
-                        And wrote the following C  code:
+                        And wrote the following C code:
                 <p>
 
                         <cite>#include<<x>stdio.h></cite><br />
@@ -58,23 +58,23 @@
                                 <cite>return 0;</cite><br />
                         <cite>}</cite> <br />
                 </p>
-                <p>THe web browser will only display Hello World.As printf("Content-type: text/plain\n\n"); would only tell the web browser that i am transfering a plain text.The line "Content-type: text/html\n\n" is special piece of text that must be the first thing sent to the browser by any CGI script. As long as you remember to do that, everything will be fine. If you forget, the browser will reject the output of the script. </p>
+                <p>The web browser will only display Hello World. As printf("Content-type: text/plain\n\n"); would only tell the web browser that I am transfering a plain text.The line "Content-type: text/html\n\n" is special piece of text that must be the first thing sent to the browser by any CGI script. As long as you remember to do that, everything will be fine. If you forget, the browser will reject the output of the script. </p>
 
                 <h2>STEP 4: Compiling the C  code and executing it</h2>
                 <p>
-                        To compile the C code i used the given command:<br />
+                        To compile the C code I used the given command:<br />
                 <ul>
                         <li>gcc hello.c -o hello</li>
                         <li>./hello</li>
                 </ul><br />
-                         After this i used the command to enable CGI on my terminal:<br />
+                         After this I used the command to enable CGI on my terminal:<br />
 
-                <p>The CGI (Common Gateway Interface) defines a way for a web server to interact with external content-generating programs, which are often referred to as CGI programs or CGI scripts. It>
+                <p>The CGI (Common Gateway Interface) defines a way for a web server to interact with external content-generating programs, which are often referred to as CGI programs or CGI scripts. It is a simple way to put dynamic content on your web site, using whatever programming language you're most familiar with.
                 <p>     The commands were as follows:</p>
                 <ul>
-                        <li>sudo a2enmod cgi (to enable cgi and we need to do this only once.)</li>
-                        <li>sudo service apache2 restart(it is used to activate the new configuration.)</li>
-                        <li>sudo cp hello /usr/lib/cgi-bin(Here we copied the compiled C code to /usr/lib/cgi-bin)</li>
+                        <li>sudo a2enmod cgi (to enable cgi and we need to do this only once)</li>
+                        <li>sudo service apache2 restart (it is used to activate the new configuration)</li>
+                        <li>sudo cp hello /usr/lib/cgi-bin (Here we copied the compiled C code to /usr/lib/cgi-bin)</li>
                 </ul>
                 <p>
                         Now search:
@@ -82,12 +82,14 @@
                 <ul>
                         <li>ip address/cgi-bin/hello</li>
                 </ul>
-                <p>To know my ip address i used the command:</p>
+                <p>To know my ip address I used the command:</p>
                  <ul>
                         <li>hostname -I | awk '{print $1}'</li>
                 </ul>
-                <p><strong>Following the above commands <u>Hello world</u> was exexcuted on the browser</strong></p>
-                </body>
+                <p><strong>Following the above commands <u>Hello world</u> was exexcuted on the browser.</strong></p>
+        <p>It was amazing to learn something new like this.</p>
+        <p>Thanks!</p>
+        </body>
 </html>
 
 
