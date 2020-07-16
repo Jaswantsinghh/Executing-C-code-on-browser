@@ -11,16 +11,18 @@ char* step(int rows, int columns, char* prevSimulation);
 int main(int argc, char* argv[])
 {
 	printf("Content-type:text/plain\n\n");
-
-  int rows = atoi(argv[1]);
+int rows,columns;
+  scanf("%d",&rows);
+  rows = atoi(argv[1]);
   if(rows <= 0)
   {
     printf("Row count must be greater than zero. Was %d\n", rows);
     return -1;
   }
   rows+=2;
-
-  int columns = atoi(argv[2]);
+  
+  scanf("%d",&columns);	
+  columns = atoi(argv[2]);
   if(columns <= 0)
   {
     printf("Column count must be greater than zero. Was %d\n", columns);
